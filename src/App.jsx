@@ -60,8 +60,6 @@ export default function Home() {
 
       setLocation({ latitude, longitude });
       await getReverseGeocode(latitude, longitude);
-      const types = ["airport", "atm", "bakery", "bank", "travel_agency", "university"];
-      await getNearbyRestaurants(latitude, longitude, types);
     } catch (err) {
       setError(`IP-based location fetching failed: ${err.message}`);
     }
